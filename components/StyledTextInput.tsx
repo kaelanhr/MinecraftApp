@@ -35,6 +35,7 @@ const styles = StyleSheet.create({
 		paddingLeft: 5,
 		paddingTop: 2,
 		paddingBottom: 2,
+		minWidth: 100
 	},
 	inputDisabled: {
 		color: "#FFFFFF",
@@ -46,7 +47,6 @@ const styles = StyleSheet.create({
 		paddingBottom: 2,
 	},
 	title: {
-		color: "black",
 		fontSize: 20,
 		fontWeight: "bold",
 		marginBottom: 10,
