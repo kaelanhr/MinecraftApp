@@ -1,6 +1,5 @@
 import React from "react";
-import { StyleSheet } from "react-native";
-import { TextInput } from "react-native";
+import { StyleSheet, TextInput } from "react-native";
 import { Text } from "../components/Themed";
 
 interface IStyledTextInput {
@@ -8,6 +7,8 @@ interface IStyledTextInput {
 	editable?: boolean;
 	placeholder?: string;
 	secureText?: boolean;
+	value?: string;
+	onPress?: Function;
 }
 
 export default function StyledTextInput(props: IStyledTextInput) {
@@ -22,6 +23,7 @@ export default function StyledTextInput(props: IStyledTextInput) {
 				placeholderTextColor="#ACACAC"
 				editable={props.editable ?? true}
 				secureTextEntry={props.secureText ?? false}
+				value={props.value}
 			/>
 		</>
 	);
