@@ -1,14 +1,14 @@
 import { CheckBox } from "native-base";
 import React from "react";
 import { Text, View } from "../../Themed";
-import { ICheckboxItemProps } from "./CheckboxItemType";
+import { ICheckboxItemGroup } from "./CheckboxItemType";
 
-
-export default function CheckboxItem(props: ICheckboxItemProps) {
+export default function CheckboxItem(props: ICheckboxItemGroup) {
 	return (
 		<View onTouchEnd={props.onSelected}>
-			<CheckBox />
-			<Text>{props.value}</Text>
+			<CheckBox checked={props.isSelected} />
+			<Text>{props.displayValue}</Text>
+			<Text>{props.id}</Text>
 		</View>
 	);
 }
