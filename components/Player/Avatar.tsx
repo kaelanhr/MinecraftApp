@@ -4,7 +4,7 @@ import { Text, View } from "../Themed";
 
 interface IPlayerAvatarProps {
 	username?: string;
-	color: string;
+	color?: string;
 }
 
 export default function Avatar(props: IPlayerAvatarProps) {
