@@ -9,7 +9,7 @@ export default function LoginScreen() {
 			<Text>Login</Text>
 			<StyledTextInput placeholder="Username" />
 			<StyledTextInput placeholder="Password" secureText={true} />
-			<StyledButton title="Submit" onPress={() => null} />
+			<StyledButton buttonText="Submit" onPress={() => null} />
 		</>
 	);
 }
