@@ -1,8 +1,7 @@
 import * as React from "react";
 import { StyleSheet } from "react-native";
-import NewBattle from "../components/Battle/NewBattle";
-
-import { Text, View } from "../components/Themed";
+import NewBattle from "Components/Battle/NewBattle";
+import { Text,View } from "Components/Themed";
 
 export default function BattleScreen() {
 	return (

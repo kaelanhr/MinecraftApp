@@ -1,8 +1,8 @@
 import React from "react";
-import Avatar from "../components/Player/Avatar";
-import StyledButton from "../components/StyledButton";
-import StyledTextInput from "../components/StyledTextInput";
-import { View } from "../components/Themed";
+import Avatar from "Components/Player/Avatar";
+import StyledButton from "Components/StyledButton";
+import StyledTextInput from "Components/StyledTextInput";
+import { View } from "Components/Themed";
 
 export default function ProfileScreen() {
 	return (

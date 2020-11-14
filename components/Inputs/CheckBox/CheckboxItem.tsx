@@ -1,6 +1,6 @@
 import { CheckBox } from "native-base";
 import React from "react";
-import { Text, View } from "../../Themed";
+import { Text, View } from "Components/Themed";
 import { ICheckboxItemGroup } from "./CheckboxItemType";
 
 export default function CheckboxItem(props: ICheckboxItemGroup) {

@@ -1,6 +1,6 @@
 import React from "react";
 import { StyleSheet } from "react-native";
-import { Text, View } from "../Themed";
+import { Text, View } from "Components/Themed";
 
 interface IPlayerAvatarProps {
 	username?: string;

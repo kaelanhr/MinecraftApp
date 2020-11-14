@@ -1,6 +1,6 @@
 import React from "react";
 import { Pressable, StyleSheet } from "react-native";
-import { View, Text } from "../../Themed";
+import { View, Text } from "Components/Themed";
 
 interface IConfirmDialogProps {
 	onConfirm: () => void;

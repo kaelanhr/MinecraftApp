@@ -1,6 +1,6 @@
 import { Radio } from "native-base";
 import React from "react";
-import { Text, View } from "../../Themed";
+import { Text, View } from "Components/Themed";
 import { StyleSheet } from "react-native";
 import { IRadioItemGroup } from "./RadioItemType";
 

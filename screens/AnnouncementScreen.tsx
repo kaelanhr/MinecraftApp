@@ -1,8 +1,8 @@
 import { Textarea } from "native-base";
 import React from "react";
-import ConfirmDialog from "../components/Inputs/ButtonGroup/ConfirmDialog";
-import StyledTextInput from "../components/StyledTextInput";
-import { View, Text } from "../components/Themed";
+import ConfirmDialog from "Components/Inputs/ButtonGroup/ConfirmDialog";
+import StyledTextInput from "Components/StyledTextInput";
+import { View, Text } from "Components/Themed";
 
 export default function Announcement() {
 	return (

@@ -1,6 +1,6 @@
 import React from "react";
 import { StyleSheet, TextInput } from "react-native";
-import { Text } from "../components/Themed";
+import { Text } from "Components/Themed";
 
 interface IStyledTextInput {
 	title?: string;

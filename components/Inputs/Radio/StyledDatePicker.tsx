@@ -1,7 +1,7 @@
 import DateTimePicker from "@react-native-community/datetimepicker";
 import React, { useState } from "react";
 import { Platform, View } from "react-native";
-import StyledTextInput from "../../StyledTextInput";
+import StyledTextInput from "Components/StyledTextInput";
 
 export default function StyledDatePicker() {
 	const [date, setDate] = useState(new Date(1598051730000));

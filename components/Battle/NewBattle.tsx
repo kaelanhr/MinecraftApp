@@ -1,7 +1,7 @@
 import { Textarea } from "native-base";
 import React from "react";
-import StyledTextInput from "../StyledTextInput";
-import { Text } from "../Themed";
+import StyledTextInput from "Components/StyledTextInput";
+import { Text } from "Components/Themed";
 
 export default function NewBattle() {
 

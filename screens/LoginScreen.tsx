@@ -1,7 +1,7 @@
 import React from "react";
-import StyledButton from "../components/StyledButton";
-import StyledTextInput from "../components/StyledTextInput";
-import { Text } from "../components/Themed";
+import StyledButton from "Components/StyledButton";
+import StyledTextInput from "Components/StyledTextInput";
+import { Text } from "Components/Themed";
 
 export default function LoginScreen() {
 	return (
