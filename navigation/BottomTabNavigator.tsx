@@ -1,4 +1,4 @@
-import { Ionicons } from "@expo/vector-icons";
+import { FontAwesome5, Ionicons, Octicons } from "@expo/vector-icons";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createStackNavigator } from "@react-navigation/stack";
 import { View } from "native-base";
@@ -11,6 +11,7 @@ import HomeScreen from "../screens/HomeScreen";
 import ProjectScreen from "../screens/ProjectScreen";
 import TradeScreen from "../screens/TradeScreen";
 import { BottomTabParamList, HomeParamList, ProjectParamList } from "../types";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
 
@@ -20,14 +21,18 @@ export default function BottomTabNavigator() {
 	return (
 		<BottomTab.Navigator
 			initialRouteName="Home"
-			tabBarOptions={{ activeTintColor: Colors[colorScheme].tint }}
+			tabBarOptions={{ activeTintColor: "green" }}
 		>
 			<BottomTab.Screen
 				name="Home"
 				component={HomeNavigator}
 				options={{
 					tabBarIcon: ({ color }) => (
-						<TabBarIcon name="ios-code" color={color} />
+						<MaterialCommunityIcons
+							name="home-circle"
+							size={24}
+							color="white"
+						/>
 					),
 				}}
 			/>
@@ -36,7 +41,7 @@ export default function BottomTabNavigator() {
 				component={ProjectNavigator}
 				options={{
 					tabBarIcon: ({ color }) => (
-						<TabBarIcon name="ios-code" color={color} />
+						<Octicons name="project" size={24} color="white" />
 					),
 				}}
 			/>
@@ -45,7 +50,7 @@ export default function BottomTabNavigator() {
 				component={TradeScreen}
 				options={{
 					tabBarIcon: ({ color }) => (
-						<TabBarIcon name="ios-code" color={color} />
+						<FontAwesome5 name="handshake" size={24} color="white" />
 					),
 				}}
 			/>
@@ -54,7 +59,11 @@ export default function BottomTabNavigator() {
 				component={BattleScreen}
 				options={{
 					tabBarIcon: ({ color }) => (
-						<TabBarIcon name="ios-code" color={color} />
+						<MaterialCommunityIcons
+							name="sword-cross"
+							size={24}
+							color="white"
+						/>
 					),
 				}}
 			/>
@@ -74,12 +83,8 @@ const HomeStack = createStackNavigator<HomeParamList>();
 
 function HomeNavigator() {
 	return (
-		<HomeStack.Navigator>
-			<HomeStack.Screen
-				name="HomeScreen"
-				component={HomeScreen}
-				options={{ headerTitle: "Tab One Title" }}
-			/>
+		<HomeStack.Navigator headerMode="none">
+			<HomeStack.Screen name="HomeScreen" component={HomeScreen} />
 		</HomeStack.Navigator>
 	);
 }
@@ -88,11 +93,10 @@ const ProjectStack = createStackNavigator<ProjectParamList>();
 
 function ProjectNavigator() {
 	return (
-		<ProjectStack.Navigator>
+		<ProjectStack.Navigator headerMode="none">
 			<ProjectStack.Screen
 				name="ProjectScreen"
 				component={ProjectScreen}
-				options={{ headerTitle: "Tab Two Title" }}
 			/>
 		</ProjectStack.Navigator>
 	);

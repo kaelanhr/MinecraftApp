@@ -15,15 +15,17 @@ interface IAnnouncementProps {
 
 export default function Announcement(props: IAnnouncementProps) {
 	return (
-		<View style={styles.announcement}>
-			<View style={styles.header}>
-				<Cog />
-				<Text>{props.title}</Text>
-				<Text>Priority: {props.priority}</Text>
-				<Text>{props.user.username}</Text>
+		<>
+			<Cog height="25" width="25" />
+			<View style={styles.announcement}>
+				<View style={styles.header}>
+					<Text>{props.title}</Text>
+					<Text>Priority: {props.priority}</Text>
+					<Text>{props.user.username}</Text>
+				</View>
+				<Text>{props.message}</Text>
 			</View>
-			<Text>{props.message}</Text>
-		</View>
+		</>
 	);
 }
 
@@ -33,9 +35,9 @@ const styles = StyleSheet.create({
 		width: "95%",
 		borderColor: "#707070",
 		padding: 10,
-		color: "white"
+		color: "white",
 	},
 	header: {
-		marginBottom: 20
-	}
+		marginBottom: 20,
+	},
 });

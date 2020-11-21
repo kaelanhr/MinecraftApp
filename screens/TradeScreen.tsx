@@ -2,10 +2,12 @@ import * as React from "react";
 import { StyleSheet } from "react-native";
 
 import { Text, View } from "Components/Themed";
+import Avatar from "Components/Player/Avatar";
 
 export default function TradeScreen() {
 	return (
 		<View style={styles.container}>
+			<Avatar username="Eshman" color="green" />
 			<Text style={styles.title}>Tab Two</Text>
 			<View
 				style={styles.separator}
@@ -20,7 +22,6 @@ const styles = StyleSheet.create({
 	container: {
 		flex: 1,
 		alignItems: "center",
-		justifyContent: "center",
 	},
 	title: {
 		fontSize: 20,
