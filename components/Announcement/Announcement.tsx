@@ -2,6 +2,9 @@ import { View } from "native-base";
 import React from "react";
 import { IUser } from "Models/User";
 import { AnnouncementType } from "./AnnouncementTypes";
+import { Text } from "Components/Themed";
+import { StyleSheet } from "react-native";
+import Cog from "assets/images/COG.svg";
 
 interface IAnnouncementProps {
 	title: string;
@@ -10,6 +13,29 @@ interface IAnnouncementProps {
 	message: string;
 }
 
-export default function Announcement() {
-	return <View></View>;
+export default function Announcement(props: IAnnouncementProps) {
+	return (
+		<View style={styles.announcement}>
+			<View style={styles.header}>
+				<Cog />
+				<Text>{props.title}</Text>
+				<Text>Priority: {props.priority}</Text>
+				<Text>{props.user.username}</Text>
+			</View>
+			<Text>{props.message}</Text>
+		</View>
+	);
 }
+
+const styles = StyleSheet.create({
+	announcement: {
+		backgroundColor: "#303030",
+		width: "95%",
+		borderColor: "#707070",
+		padding: 10,
+		color: "white"
+	},
+	header: {
+		marginBottom: 20
+	}
+});

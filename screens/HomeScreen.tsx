@@ -1,6 +1,7 @@
 import * as React from "react";
 import { StyleSheet } from "react-native";
 import { Text, View } from "Components/Themed";
+import Announcement from "Components/Announcement/Announcement";
 
 export default function HomeScreen() {
 	return (
@@ -11,6 +12,7 @@ export default function HomeScreen() {
 				lightColor="#eee"
 				darkColor="rgba(255,255,255,0.1)"
 			/>
+			<Announcement message="hello there" priority="Urgent" title="Uber" user={{usercolor: "red", username: "Eshman"}} />
 		</View>
 	);
 }
