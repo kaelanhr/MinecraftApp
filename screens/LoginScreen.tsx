@@ -1,15 +1,15 @@
 import React from "react";
-import StyledButton from "Components/StyledButton";
-import StyledTextInput from "Components/StyledTextInput";
+import Button from "Components/Button";
+import TextInput from "Components/Inputs/TextInput";
 import { Text } from "Components/Themed";
 
 export default function LoginScreen() {
 	return (
 		<>
 			<Text>Login</Text>
-			<StyledTextInput placeholder="Username" />
-			<StyledTextInput placeholder="Password" secureText={true} />
-			<StyledButton buttonText="Submit" onPress={() => null} />
+			<TextInput placeholder="Username" />
+			<TextInput placeholder="Password" secureText={true} />
+			<Button buttonText="Submit" onPress={() => null} />
 		</>
 	);
 }

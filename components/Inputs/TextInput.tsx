@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, TextInput } from "react-native";
+import { StyleSheet, TextInput as DefaultTextInput } from "react-native";
 import { Text } from "Components/Themed";
 
 interface IStyledTextInput {
@@ -11,11 +11,11 @@ interface IStyledTextInput {
 	onPress?: Function;
 }
 
-export default function StyledTextInput(props: IStyledTextInput) {
+export default function TextInput(props: IStyledTextInput) {
 	return (
 		<>
 			{props.title ? <Text style={styles.title}>{props.title}</Text> : null}
-			<TextInput
+			<DefaultTextInput
 				style={
 					props.editable == false ? styles.inputDisabled : styles.inputActive
 				}

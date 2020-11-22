@@ -1,14 +1,13 @@
-import { View } from "native-base";
 import React from "react";
-import { Button, Pressable, StyleSheet } from "react-native";
-import { Text, TextProps } from "./Themed";
+import { Pressable, StyleSheet } from "react-native";
+import { Text } from "./Themed";
 
 interface IStyledButtonProps {
 	onPress: () => void;
 	buttonText: string;
 }
 
-export default function StyledButton(props: IStyledButtonProps) {
+export default function Button(props: IStyledButtonProps) {
 	return (
 		<Pressable onPress={() => {}} style={styles.Button}>
 			<Text style={styles.ButtonText}>{props.buttonText}</Text>

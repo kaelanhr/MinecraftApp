@@ -1,9 +1,9 @@
-import DateTimePicker from "@react-native-community/datetimepicker";
+import DefaultDateTimePicker from "@react-native-community/datetimepicker";
+import TextInput from "Components/Inputs/TextInput";
 import React, { useState } from "react";
 import { Platform, View } from "react-native";
-import StyledTextInput from "Components/StyledTextInput";
 
-export default function StyledDatePicker() {
+export default function DatePicker() {
 	const [date, setDate] = useState(new Date(1598051730000));
 	const [mode, setMode] = useState("date");
 	const [show, setShow] = useState(false);
@@ -30,7 +30,7 @@ export default function StyledDatePicker() {
 		<>
 			<View>
 				{show && (
-					<DateTimePicker
+					<DefaultDateTimePicker
 						testID="dateTimePicker"
 						value={date}
 						mode={"date"}
@@ -40,7 +40,7 @@ export default function StyledDatePicker() {
 					/>
 				)}
 			</View>
-			<StyledTextInput
+			<TextInput
 				editable={false}
 				onPress={showDatepicker}
 				value={date.toString()}

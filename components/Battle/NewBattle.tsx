@@ -1,13 +1,13 @@
 import { Textarea } from "native-base";
 import React from "react";
-import StyledTextInput from "Components/StyledTextInput";
 import { Text } from "Components/Themed";
+import TextInput from "Components/Inputs/TextInput";
 
 export default function NewBattle() {
 
 	return (
 		<>
-			<StyledTextInput title="Location" />
+			<TextInput title="Location" />
 			<Text>Time</Text>
 
 			<Text>Rules</Text>

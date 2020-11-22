@@ -1,26 +1,26 @@
 import React from "react";
 import Avatar from "Components/Player/Avatar";
-import StyledButton from "Components/StyledButton";
-import StyledTextInput from "Components/StyledTextInput";
+import Button from "Components/Button";
+import TextInput from "Components/Inputs/TextInput";
 import { View } from "Components/Themed";
 
 export default function ProfileScreen() {
 	return (
 		<View>
 			<Avatar />
-			<StyledTextInput editable={false} title="Role" value="Administrator" />
-			<StyledTextInput editable={false} title="Color" value="Green" />
-			<StyledTextInput
+			<TextInput editable={false} title="Role" value="Administrator" />
+			<TextInput editable={false} title="Color" value="Green" />
+			<TextInput
 				title="Username"
 				value="Eshman"
 				placeholder="Username..."
 			/>
-			<StyledTextInput
+			<TextInput
 				title="Description"
 				value="Some Dude"
 				placeholder={"Description..."}
 			/>
-			<StyledButton onPress={() => null} buttonText="Update Profile" />
+			<Button onPress={() => null} buttonText="Update Profile" />
 		</View>
 	);
 }
