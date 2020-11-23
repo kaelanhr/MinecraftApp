@@ -16,7 +16,7 @@ interface IAnnouncementProps {
 export default function Announcement(props: IAnnouncementProps) {
 	return (
 		<>
-			<Cog height="25" width="25" />
+			<Cog height="25" width="25"/>
 			<View style={styles.announcement}>
 				<View style={styles.header}>
 					<Text>{props.title}</Text>

@@ -1,34 +1,16 @@
 import * as React from "react";
-import { StyleSheet } from "react-native";
-import { Text, View } from "Components/Themed";
 import Announcement from "Components/Announcement/Announcement";
+import ScreenBackground from "./ScreenBackground";
 
 export default function HomeScreen() {
 	return (
-		<View style={styles.container}>
+		<ScreenBackground>
 			<Announcement
 				message="hello there"
 				priority="Urgent"
 				title="Uber"
 				user={{ usercolor: "red", username: "Eshman" }}
 			/>
-		</View>
+		</ScreenBackground>
 	);
 }
-
-const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		alignItems: "center",
-		justifyContent: "center",
-	},
-	title: {
-		fontSize: 20,
-		fontWeight: "bold",
-	},
-	separator: {
-		marginVertical: 30,
-		height: 1,
-		width: "80%",
-	},
-});

@@ -2,12 +2,13 @@ import * as React from "react";
 import { StyleSheet } from "react-native";
 
 import { Text, View } from "../Components/Themed";
+import ScreenBackground from "./ScreenBackground";
 
 export default function ProjectScreen() {
 	return (
-		<View style={styles.container}>
+		<ScreenBackground>
 			<Text style={styles.title}>Project</Text>
-		</View>
+		</ScreenBackground>
 	);
 }
 

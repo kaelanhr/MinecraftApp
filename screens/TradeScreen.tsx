@@ -3,10 +3,11 @@ import { StyleSheet } from "react-native";
 
 import { Text, View } from "Components/Themed";
 import Avatar from "Components/Player/Avatar";
+import ScreenBackground from "./ScreenBackground";
 
 export default function TradeScreen() {
 	return (
-		<View style={styles.container}>
+		<ScreenBackground>
 			<Avatar username="Eshman" color="green" />
 			<Text style={styles.title}>Tab Two</Text>
 			<View
@@ -14,7 +15,7 @@ export default function TradeScreen() {
 				lightColor="#eee"
 				darkColor="rgba(255,255,255,0.1)"
 			/>
-		</View>
+		</ScreenBackground>
 	);
 }
 
