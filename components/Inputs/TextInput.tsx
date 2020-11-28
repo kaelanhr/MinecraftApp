@@ -37,7 +37,8 @@ const styles = StyleSheet.create({
 		paddingLeft: 5,
 		paddingTop: 2,
 		paddingBottom: 2,
-		minWidth: 100
+		minWidth: 100,
+		width: "80%",
 	},
 	inputDisabled: {
 		color: "#FFFFFF",
@@ -47,6 +48,8 @@ const styles = StyleSheet.create({
 		paddingLeft: 5,
 		paddingTop: 2,
 		paddingBottom: 2,
+		minWidth: 100,
+		width: "80%",
 	},
 	title: {
 		fontSize: 20,
