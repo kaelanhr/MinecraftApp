@@ -1,11 +1,11 @@
 import DefaultDateTimePicker from "@react-native-community/datetimepicker";
 import TextInput from "Components/Inputs/TextInput";
 import React, { useState } from "react";
-import { Platform, View } from "react-native";
+import { Platform, Pressable, View } from "react-native";
 
-export default function DatePicker() {
+
+export default function TimePicker() {
 	const [date, setDate] = useState(new Date(1598051730000));
-	const [mode, setMode] = useState("date");
 	const [show, setShow] = useState(false);
 
 	const onChange = (event: any, selectedDate: any) => {
@@ -14,18 +14,6 @@ export default function DatePicker() {
 		setDate(currentDate);
 	};
 
-	const showMode = (currentMode: "date" | "time") => {
-		setShow(true);
-		setMode(currentMode);
-	};
-
-	const showDatepicker = () => {
-		showMode("date");
-	};
-
-	const showTimepicker = () => {
-		showMode("time");
-	};
 	return (
 		<>
 			<View>
@@ -33,18 +21,20 @@ export default function DatePicker() {
 					<DefaultDateTimePicker
 						testID="dateTimePicker"
 						value={date}
-						mode={"date"}
+						mode={"time"}
 						is24Hour={true}
 						display="default"
 						onChange={onChange}
 					/>
 				)}
 			</View>
-			<TextInput
-				editable={false}
-				onPress={showDatepicker}
-				value={date.toString()}
-			/>
+			<Pressable onTouchEnd={() => setShow(true)}>
+				<TextInput
+					editable={false}
+					onPress={() => setShow(true)}
+					value={`${date.getHours()}:${date.getMinutes()}:00`}
+				/>
+			</Pressable>
 		</>
 	);
 }
