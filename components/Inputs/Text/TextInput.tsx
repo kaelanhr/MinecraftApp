@@ -1,8 +1,9 @@
 import React from "react";
 import { StyleSheet, TextInput as DefaultTextInput } from "react-native";
 import { Text } from "Components/Themed";
+import { View } from "react-native";
 
-interface IStyledTextInput {
+interface ITextInput {
 	title?: string;
 	editable?: boolean;
 	placeholder?: string;
@@ -11,7 +12,7 @@ interface IStyledTextInput {
 	onPress?: Function;
 }
 
-export default function TextInput(props: IStyledTextInput) {
+export default function TextInput(props: ITextInput) {
 	return (
 		<>
 			{props.title ? <Text style={styles.title}>{props.title}</Text> : null}
@@ -38,7 +39,6 @@ const styles = StyleSheet.create({
 		paddingTop: 2,
 		paddingBottom: 2,
 		minWidth: 100,
-		width: "80%",
 	},
 	inputDisabled: {
 		color: "#FFFFFF",
@@ -49,7 +49,6 @@ const styles = StyleSheet.create({
 		paddingTop: 2,
 		paddingBottom: 2,
 		minWidth: 100,
-		width: "80%",
 	},
 	title: {
 		fontSize: 20,
