@@ -1,6 +1,8 @@
 import React from "react";
 import { Pressable, StyleSheet } from "react-native";
 import { View, Text } from "Components/Themed";
+import Cancel from "Components/Icons/Cancel";
+import Accept from "Components/Icons/Accept";
 
 interface IConfirmDialogProps {
 	onConfirm: () => void;
@@ -10,11 +12,11 @@ interface IConfirmDialogProps {
 export default function ConfirmDialog(props: IConfirmDialogProps) {
 	return (
 		<View style={styles.Wrapper}>
-			<Pressable onPress={props.onCancel} style={[styles.Cancel, styles.Button]}>
-				<Text style={styles.Text}>Cancel</Text>
+			<Pressable onPress={props.onCancel}>
+				<Cancel />
 			</Pressable>
-			<Pressable onPress={props.onConfirm} style={[styles.Confirm, styles.Button]}>
-				<Text style={styles.Text}>Confirm</Text>
+			<Pressable onPress={props.onConfirm}>
+				<Accept />
 			</Pressable>
 		</View>
 	);
@@ -24,18 +26,5 @@ const styles = StyleSheet.create({
 	Wrapper: {
 		flexDirection: "row",
 		padding: 10,
-	},
-	Button: {
-		padding: 5,
-		margin: 10,
-	},
-	Confirm: {
-		backgroundColor: "green",
-	},
-	Cancel: {
-		backgroundColor: "red",
-	},
-	Text: {
-		color: "white",
 	},
 });
