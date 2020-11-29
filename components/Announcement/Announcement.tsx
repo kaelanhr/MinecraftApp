@@ -5,6 +5,9 @@ import { AnnouncementType } from "./AnnouncementTypes";
 import { Text } from "Components/Themed";
 import { StyleSheet } from "react-native";
 import Cog from "assets/images/COG.svg";
+import Plus from "Components/Icons/Plus";
+import Cancel from "Components/Icons/Cancel";
+import Accept from "Components/Icons/Accept";
 
 interface IAnnouncementProps {
 	title: string;
@@ -16,7 +19,11 @@ interface IAnnouncementProps {
 export default function Announcement(props: IAnnouncementProps) {
 	return (
 		<>
-			<Cog height="25" width="25"/>
+			<Cog height="25" width="25" />
+			<Plus />
+			<Cancel />
+			<Accept />
+
 			<View style={styles.announcement}>
 				<View style={styles.header}>
 					<Text>{props.title}</Text>
