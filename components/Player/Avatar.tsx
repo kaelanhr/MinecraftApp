@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet } from "react-native";
+import { Image, StyleSheet } from "react-native";
 import { Text, View } from "Components/Themed";
 
 interface IPlayerAvatarProps {
@@ -10,7 +10,12 @@ interface IPlayerAvatarProps {
 export default function Avatar(props: IPlayerAvatarProps) {
 	return (
 		<View>
-			<View style={styles.avatar} />
+			<Image
+				source={{
+					uri: `https://minotar.net/avatar/${props.username}.png`,
+				}}
+				style={styles.avatar}
+			/>
 			<Text style={{ color: props.color }}>{props.username}</Text>
 		</View>
 	);
@@ -20,7 +25,5 @@ const styles = StyleSheet.create({
 	avatar: {
 		width: 50,
 		height: 50,
-		backgroundColor: "black",
-		marginBottom: 10
 	},
 });
