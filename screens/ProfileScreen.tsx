@@ -1,7 +1,7 @@
 import React from "react";
 import Avatar from "Components/Player/Avatar";
 import Button from "Components/Button";
-import TextInput from "Components/Inputs/TextInput";
+import TextInput from "Components/Inputs/Text/TextInput";
 import { View } from "Components/Themed";
 
 export default function ProfileScreen() {
