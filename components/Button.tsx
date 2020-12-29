@@ -9,7 +9,7 @@ interface IStyledButtonProps {
 
 export default function Button(props: IStyledButtonProps) {
 	return (
-		<Pressable onPress={() => {}} style={styles.Button}>
+		<Pressable onPress={() => props.onPress()} style={styles.Button}>
 			<Text style={styles.ButtonText}>{props.buttonText}</Text>
 		</Pressable>
 	);
