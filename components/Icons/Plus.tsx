@@ -1,11 +1,12 @@
 import PlusIcon from "assets/images/Plus.svg";
-
 import React from "react";
-import { View } from "react-native";
-import { StyleSheet } from "react-native";
+import * as Layout from "constants/Layout";
 
 export default function Plus() {
 	return (
-			<PlusIcon height="25" width="25" />
+		<PlusIcon
+			height={Layout.ButtonSize}
+			width={Layout.ButtonSize}
+		/>
 	);
 }

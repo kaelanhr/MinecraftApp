@@ -1,6 +1,5 @@
 import React from "react";
-import { Pressable, StyleSheet } from "react-native";
-import { View, Text } from "Components/Themed";
+import { Pressable, StyleSheet, View } from "react-native";
 import Cancel from "Components/Icons/Cancel";
 import Accept from "Components/Icons/Accept";
 
@@ -26,5 +25,7 @@ const styles = StyleSheet.create({
 	Wrapper: {
 		flexDirection: "row",
 		padding: 10,
+		marginTop: 10,
+		justifyContent: "space-evenly",
 	},
 });

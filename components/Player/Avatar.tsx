@@ -1,10 +1,10 @@
 import React from "react";
-import { Image, StyleSheet } from "react-native";
-import { Text, View } from "Components/Themed";
+import { Image, StyleSheet, View, Text } from "react-native";
+import { PlayerColors } from "constants/Colors";
 
 interface IPlayerAvatarProps {
 	username?: string;
-	color?: string;
+	color: string;
 }
 
 export default function Avatar(props: IPlayerAvatarProps) {

@@ -5,7 +5,7 @@ import ScreenBackground from "./ScreenBackground";
 export default function BattleScreen() {
 	return (
 		<>
-			<ScreenBackground>
+			<ScreenBackground isCentred={true}>
 				<NewBattle />
 			</ScreenBackground>
 		</>

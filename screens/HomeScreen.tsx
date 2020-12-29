@@ -4,9 +4,10 @@ import ScreenBackground from "./ScreenBackground";
 import Cog from "assets/images/COG.svg";
 import Plus from "Components/Icons/Plus";
 import { StackScreenProps } from "@react-navigation/stack";
-import { Button, Pressable } from "react-native";
+import { Pressable } from "react-native";
+import { RootStackParamList } from "types";
 
-export default function HomeScreen({ navigation }: any) {
+export default function HomeScreen({ navigation }: StackScreenProps<RootStackParamList, "Root">) {
 	return (
 		<ScreenBackground>
 			<Pressable

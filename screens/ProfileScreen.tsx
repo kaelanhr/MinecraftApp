@@ -1,16 +1,16 @@
-import React, { Props } from "react";
+import React from "react";
 import Avatar from "Components/Player/Avatar";
 import Button from "Components/Button";
 import TextInput from "Components/Inputs/Text/TextInput";
-import { View } from "Components/Themed";
 import { StackScreenProps } from "@react-navigation/stack";
-import { Pressable } from "react-native";
 import ScreenBackground from "./ScreenBackground";
+import { RootStackParamList } from "types";
+import * as Colors from "constants/Colors"
 
-export default function ProfileScreen({ navigation }: any) {
+export default function ProfileScreen({ navigation }: StackScreenProps<RootStackParamList, "Profile">) {
 	return (
-		<ScreenBackground>
-			<Avatar />
+		<ScreenBackground isCentred={true}>
+			<Avatar username="Eshman" color={Colors.PlayerColors.green} />
 			<TextInput editable={false} title="Role" value="Administrator" />
 			<TextInput editable={false} title="Color" value="Green" />
 			<TextInput title="Username" value="Eshman" placeholder="Username..." />
@@ -19,7 +19,7 @@ export default function ProfileScreen({ navigation }: any) {
 				value="Some Dude"
 				placeholder={"Description..."}
 			/>
-			<Button onPress={() => console.log("uhoh")} buttonText="Update Profile" />
+			<Button onPress={() => console.log("update profile")} buttonText="Update Profile" />
 			<Button onPress={() => navigation.goBack()} buttonText="Back" />
 		</ScreenBackground>
 	);

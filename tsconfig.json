@@ -10,7 +10,8 @@
 		"strict": true,
 		"baseUrl": ".",
 		"paths": {
-			"Components": ["./Components/*"]
+			"Components": ["./Components/*"],
+			"constants": ["./constants/*"]
 		}
 	}
 }

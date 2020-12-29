@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "Components/Button";
-import TextInput from "Components/Inputs/TextInput";
+import TextInput from "Components/Inputs/Text/TextInput";
 import { Text } from "Components/Themed";
 
 export default function LoginScreen() {
