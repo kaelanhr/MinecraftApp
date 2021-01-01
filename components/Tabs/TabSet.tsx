@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { StyleSheet, View, Text, Pressable } from "react-native";
 import * as Colors from "constants/Colors";
+import React, { useState } from "react";
+import { Pressable, StyleSheet, Text, View } from "react-native";
 
 interface ITabSetProps {
 	children: React.ReactElement<ITabProps>[];
@@ -18,7 +18,6 @@ export default function TabSet(props: ITabSetProps) {
 	return (
 		<>
 			<View style={styles.TabTitles}>
-				{/* render out the tab titles */}
 				{props.children.map((x, key) => (
 					<Pressable
 						onPress={() => setActiveTab(x.props.index)}
@@ -43,7 +42,6 @@ export default function TabSet(props: ITabSetProps) {
 					</Pressable>
 				))}
 			</View>
-			{/* render tab content */}
 			<View>{props.children[activeTab]}</View>
 		</>
 	);

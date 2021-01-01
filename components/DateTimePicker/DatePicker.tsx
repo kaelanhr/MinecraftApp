@@ -1,8 +1,7 @@
 import DefaultDateTimePicker from "@react-native-community/datetimepicker";
-import { ITextInput } from "Components/Inputs/Text/ITextInput";
-import TextInput from "Components/Inputs/Text/TextInput";
+import TextInput from "Components/Text/TextInput";
 import React, { useState } from "react";
-import { Platform, View, Text, Pressable } from "react-native";
+import { Platform, Pressable } from "react-native";
 
 interface IDatePickerProps {
 	title?: string

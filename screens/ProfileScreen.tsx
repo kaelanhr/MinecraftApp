@@ -1,11 +1,11 @@
-import React from "react";
-import Avatar from "Components/Player/Avatar";
-import Button from "Components/Button";
-import TextInput from "Components/Inputs/Text/TextInput";
 import { StackScreenProps } from "@react-navigation/stack";
-import ScreenBackground from "./ScreenBackground";
+import Button from "Components/Button";
+import Avatar from "Components/Player/Avatar";
+import TextInput from "Components/Text/TextInput";
+import * as Colors from "constants/Colors";
+import React from "react";
 import { RootStackParamList } from "types";
-import * as Colors from "constants/Colors"
+import ScreenBackground from "./ScreenBackground";
 
 export default function ProfileScreen({ navigation }: StackScreenProps<RootStackParamList, "Profile">) {
 	return (

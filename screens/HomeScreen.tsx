@@ -1,11 +1,10 @@
-import * as React from "react";
-import Announcement from "Components/Announcement/Announcement";
-import ScreenBackground from "./ScreenBackground";
-import Cog from "assets/images/COG.svg";
-import Plus from "Components/Icons/Plus";
 import { StackScreenProps } from "@react-navigation/stack";
+import Cog from "assets/images/COG.svg";
+import AnnouncementItem from "Components/Announcement/AnnouncementItem";
+import * as React from "react";
 import { Pressable } from "react-native";
 import { RootStackParamList } from "types";
+import ScreenBackground from "./ScreenBackground";
 
 export default function HomeScreen({ navigation }: StackScreenProps<RootStackParamList, "Root">) {
 	return (
@@ -15,8 +14,8 @@ export default function HomeScreen({ navigation }: StackScreenProps<RootStackPar
 			>
 			<Cog height="25" width="25" style={{ alignSelf: "flex-end" }} />
 			</Pressable>
-			<Plus />
-			<Announcement
+			{/* <Plus /> */}
+			<AnnouncementItem
 				message="hello there"
 				priority="Urgent"
 				title="Uber"

@@ -1,7 +1,6 @@
-import React from "react";
+import { StyledText } from "Components/Themed";
 import { Textarea as NativeTextarea } from "native-base";
-import { Text } from "Components/Themed";
-import { View } from "react-native";
+import React from "react";
 
 interface ITextAreaProps {
 	title?: string;
@@ -10,7 +9,7 @@ interface ITextAreaProps {
 export default function TextArea(props: ITextAreaProps) {
 	return (
 		<>
-			<Text>{props.title}</Text>
+			<StyledText>{props.title}</StyledText>
 			<NativeTextarea
 				rowSpan={5}
 				bordered

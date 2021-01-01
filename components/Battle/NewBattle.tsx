@@ -1,11 +1,10 @@
+import { ConfirmDialog } from "Components/Button/ButtonGroup";
+import DatePicker from "Components/DateTimePicker/DatePicker";
+import TimePicker from "Components/DateTimePicker/TimePicker";
+import TextArea from "Components/Text/TextArea";
+import TextInput from "Components/Text/TextInput";
 import React from "react";
-import { Text } from "Components/Themed";
-import TextInput from "Components/Inputs/Text/TextInput";
-import TextArea from "Components/Inputs/Text/TextArea";
-import DatePicker from "Components/Inputs/DateTimePicker/DatePicker";
-import TimePicker from "Components/Inputs/DateTimePicker/TimePicker";
 import { View } from "react-native";
-import ConfirmDialog from "Components/Inputs/ButtonGroup/ConfirmDialog";
 
 export default function NewBattle() {
 	return (

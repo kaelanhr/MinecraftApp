@@ -1,10 +1,10 @@
+import Avatar from "Components/Player/Avatar";
+import TabSet, { Tab } from "Components/Tabs/TabSet";
+import { StyledText } from "Components/Themed";
+import * as Colors from "constants/Colors";
 import * as React from "react";
 import { StyleSheet, View } from "react-native";
-import { Text } from "Components/Themed";
-import Avatar from "Components/Player/Avatar";
 import ScreenBackground from "./ScreenBackground";
-import * as Colors from "constants/Colors";
-import TabSet, { Tab } from "Components/Tabs/TabSet";
 
 export default function TradeScreen() {
 	return (
@@ -16,13 +16,13 @@ export default function TradeScreen() {
 			<View style={styles.container}>
 				<TabSet>
 					<Tab index={0} name={"Transactions"} key={0}>
-						<Text>Blah</Text>
+						<StyledText>Blah</StyledText>
 					</Tab>
 					<Tab index={1} name={"Pending"} key={1}>
-						<Text>Pending Tab</Text>
+						<StyledText>Pending Tab</StyledText>
 					</Tab>
 					<Tab index={2} name={"New Trade"} key={2}>
-						<Text>Other Tab</Text>
+						<StyledText>Other Tab</StyledText>
 					</Tab>
 				</TabSet>
 			</View>

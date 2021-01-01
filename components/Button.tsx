@@ -1,6 +1,6 @@
 import React from "react";
 import { Pressable, StyleSheet } from "react-native";
-import { Text } from "./Themed";
+import { StyledText } from "./Themed";
 
 interface IStyledButtonProps {
 	onPress: () => void;
@@ -10,7 +10,7 @@ interface IStyledButtonProps {
 export default function Button(props: IStyledButtonProps) {
 	return (
 		<Pressable onPress={() => props.onPress()} style={styles.Button}>
-			<Text style={styles.ButtonText}>{props.buttonText}</Text>
+			<StyledText style={styles.ButtonText}>{props.buttonText}</StyledText>
 		</Pressable>
 	);
 }

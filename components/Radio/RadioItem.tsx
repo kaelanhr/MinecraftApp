@@ -1,18 +1,21 @@
+import { StyledText } from "Components/Themed";
+import * as Colors from "constants/Colors";
 import { Radio } from "native-base";
 import React from "react";
-import { Text, View } from "Components/Themed";
-import { StyleSheet } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { IRadioItemGroup } from "./RadioItemType";
 
 export default function RadioItem(props: IRadioItemGroup) {
 	return (
 		<View style={styles.radioItem} onTouchEnd={props.onSelected}>
-			<Text>{props.displayValue}</Text>
+			<View style={{ width: 60, marginTop: 10 }}>
+				<StyledText>{props.displayValue}</StyledText>
+			</View>
 			<Radio
-				color="#D5D5D5"
-				selectedColor="#06D136"
+				color={Colors.Grey}
+				selectedColor={Colors.Green}
 				selected={props.isSelected}
-				style={{ marginLeft: 30 }}
+				style={{ marginLeft: 40, marginTop: 10 }}
 			/>
 		</View>
 	);
@@ -20,7 +23,6 @@ export default function RadioItem(props: IRadioItemGroup) {
 
 const styles = StyleSheet.create({
 	radioItem: {
-		flex: 1,
 		flexDirection: "row",
 	},
 });

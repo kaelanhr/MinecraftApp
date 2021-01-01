@@ -1,5 +1,5 @@
 import DefaultDateTimePicker from "@react-native-community/datetimepicker";
-import TextInput from "Components/Inputs/Text/TextInput";
+import TextInput from "Components/Text/TextInput";
 import React, { useState } from "react";
 import { Platform, Pressable, View } from "react-native";
 

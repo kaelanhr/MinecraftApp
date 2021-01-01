@@ -1,12 +1,12 @@
 import * as React from "react";
 import { StyleSheet } from "react-native";
-import { Text } from "../Components/Themed";
+import { StyledText } from "../Components/Themed";
 import ScreenBackground from "./ScreenBackground";
 
 export default function ProjectScreen() {
 	return (
 		<ScreenBackground>
-			<Text style={styles.title}>Project</Text>
+			<StyledText style={styles.title}>Project</StyledText>
 		</ScreenBackground>
 	);
 }
