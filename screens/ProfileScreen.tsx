@@ -1,5 +1,5 @@
 import { StackScreenProps } from "@react-navigation/stack";
-import Button from "Components/Button";
+import Button from "Components/Button/Button";
 import Avatar from "Components/Player/Avatar";
 import TextInput from "Components/Text/TextInput";
 import { PlayerColors } from "constants/Colors";
@@ -13,19 +13,19 @@ export default function ProfileScreen({
 	return (
 		<ScreenBackground isCentred={true}>
 			<Avatar username="Eshman" color={PlayerColors.green} />
-			<TextInput editable={false} title="Role" value="Administrator" />
-			<TextInput editable={false} title="Color" value="Green" />
-			<TextInput title="Username" value="Eshman" placeholder="Username..." />
+			<TextInput editable={false} label="Role" value="Administrator" />
+			<TextInput editable={false} label="Color" value="Green" />
+			<TextInput label="Username" value="Eshman" placeholder="Username..." />
 			<TextInput
-				title="Description"
+				label="Description"
 				value="Some Dude"
 				placeholder={"Description..."}
 			/>
 			<Button
 				onPress={() => console.log("update profile")}
-				buttonText="Update Profile"
+				text="Update Profile"
 			/>
-			<Button onPress={() => navigation.goBack()} buttonText="Back" />
+			<Button onPress={() => navigation.goBack()} text="Back" />
 		</ScreenBackground>
 	);
 }

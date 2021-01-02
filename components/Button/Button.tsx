@@ -4,7 +4,8 @@ import PlusIcon from "assets/images/Plus.svg";
 import CogIcon from "assets/images/COG.svg";
 import { ButtonSize } from "constants/Layout";
 import React from "react";
-import { Pressable, PressableProps } from "react-native";
+import { Pressable, PressableProps, StyleSheet } from "react-native";
+import { StyledText } from "Components/Themed";
 
 /**
  * Wrapper component to create pressable confirm button
@@ -53,3 +54,21 @@ export function Cog(props: PressableProps) {
 		</Pressable>
 	);
 }
+
+export default function Button(props: PressableProps & { text: string }) {
+	return (
+		<Pressable {...props} style={styles.Button}>
+			<StyledText style={styles.ButtonText}>{props.text}</StyledText>
+		</Pressable>
+	);
+}
+
+const styles = StyleSheet.create({
+	Button: {
+		borderRadius: 5,
+		backgroundColor: "#06D136",
+		borderColor: "black",
+		borderWidth: 1.5,
+	},
+	ButtonText: { padding: 6, color: "white" },
+});

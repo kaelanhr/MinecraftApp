@@ -13,10 +13,10 @@ export default function NewBattle() {
 	return (
 		<>
 			<View style={{ width: "80%" }}>
-				<TextInput title="Location" />
+				<TextInput label="Location" />
 				<DatePicker label="Date" />
 				<TimePicker label="Time" />
-				<TextArea title="Rules" />
+				<TextArea label="Rules" />
 				<ConfirmDialog onCancel={() => null} onConfirm={() => null} />
 			</View>
 		</>

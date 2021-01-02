@@ -1,12 +1,15 @@
 import React, { useState } from "react";
-import RadioItem from "./RadioItem";
-import { IRadioItem } from "./RadioItemType";
+import RadioItem, { IRadioButton } from "./RadioButton";
 
-interface IRadioItemGroupProps {
-	list: IRadioItem[];
+interface IRadioButtonGroupProps {
+	list: IRadioButton[];
 }
 
-export default function RadioItemGroup(props: IRadioItemGroupProps) {
+/**
+ * Component to display a collection of radio items.
+ * @param props collection of radio buttons.
+ */
+export default function RadioItemGroup(props: IRadioButtonGroupProps) {
 	const [selectedItem, setSelected] = useState("");
 
 	return (

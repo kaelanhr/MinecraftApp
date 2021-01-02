@@ -1,5 +1,5 @@
 import { ConfirmDialog } from "Components/Button/ButtonGroup";
-import RadioItemGroup from "Components/Radio/RadioItemGroup";
+import RadioItemGroup from "Components/RadioButton/RadioButtonGroup";
 import React from "react";
 import { View } from "react-native";
 

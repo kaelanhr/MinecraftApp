@@ -4,8 +4,11 @@ import { IUser } from "./User";
 export interface IAnnouncementAttributes extends IAbstractAttributes {
 	/** The title of the announcement */
 	title: string;
+	/** announcement priority/urgency */
 	priority: "Urgent" | "Minor" | "Moderate";
+	/** the user who created the announcement */
 	user: IUser;
+	/** the announcement message */
 	message: string;
 }
 

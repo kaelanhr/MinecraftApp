@@ -1,4 +1,4 @@
-import {AppColors} from "constants/Colors";
+import { Colors } from "constants/Colors";
 import React, { useState } from "react";
 import { Pressable, StyleSheet, Text, View } from "react-native";
 
@@ -7,41 +7,45 @@ interface ITabSetProps {
 }
 
 interface ITabProps {
-	name: string;
-	index: number;
+	/** the title of the tab */
+	title: string;
+	/** the child component to render when the tab is active */
 	children?: React.ReactNode;
 }
 
+/**
+ * Controller component for selecting and displaying current tab,
+ * defaults to the first tab being selected.
+ * @param props the title and child component for each tab.
+ */
 export default function TabSet(props: ITabSetProps) {
 	const [activeTab, setActiveTab] = useState(0);
 
 	return (
 		<>
+			{/* render titles */}
 			<View style={styles.TabTitles}>
 				{props.children.map((x, key) => (
 					<Pressable
-						onPress={() => setActiveTab(x.props.index)}
+						onPress={() => setActiveTab(key)}
 						key={key}
 						style={[
-							x.props.index == activeTab
-								? styles.ActiveTab
-								: styles.InActiveTab,
+							key == activeTab ? styles.ActiveTab : styles.InActiveTab,
 							styles.Tab,
 						]}
 					>
 						<Text
 							style={[
-								x.props.index == activeTab
-									? styles.ActiveText
-									: styles.InactiveText,
+								key == activeTab ? styles.ActiveText : styles.InactiveText,
 								styles.Text,
 							]}
 						>
-							{x.props.name}
+							{x.props.title}
 						</Text>
 					</Pressable>
 				))}
 			</View>
+			{/* render active tab child component */}
 			<View>{props.children[activeTab]}</View>
 		</>
 	);
@@ -55,7 +59,7 @@ const styles = StyleSheet.create({
 	TabTitles: {
 		flexDirection: "row",
 		justifyContent: "space-between",
-		borderColor: AppColors.Grey,
+		borderColor: Colors.Grey,
 		borderStyle: "solid",
 		borderWidth: 1,
 		borderRightWidth: 0,
@@ -65,21 +69,21 @@ const styles = StyleSheet.create({
 		padding: 5,
 	},
 	InactiveText: {
-		color: AppColors.Grey,
+		color: Colors.Grey,
 	},
 	ActiveText: {
-		color: AppColors.White,
+		color: Colors.White,
 	},
 	Tab: {
 		flexGrow: 1,
-		borderColor: AppColors.Grey,
+		borderColor: Colors.Grey,
 		borderStyle: "solid",
 		borderRightWidth: 1,
 	},
 	ActiveTab: {
-		backgroundColor: AppColors.Green,
+		backgroundColor: Colors.Green,
 	},
 	InActiveTab: {
-		backgroundColor: AppColors.Black,
+		backgroundColor: Colors.Black,
 	},
 });

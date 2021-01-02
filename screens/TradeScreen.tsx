@@ -15,14 +15,14 @@ export default function TradeScreen() {
 
 			<View style={styles.container}>
 				<TabSet>
-					<Tab index={0} name={"Transactions"} key={0}>
-						<StyledText>Blah</StyledText>
+					<Tab title={"Transactions"}>
+						<StyledText>Transaction Info</StyledText>
 					</Tab>
-					<Tab index={1} name={"Pending"} key={1}>
-						<StyledText>Pending Tab</StyledText>
+					<Tab title={"Pending"}>
+						<StyledText>Pending Trades</StyledText>
 					</Tab>
-					<Tab index={2} name={"New Trade"} key={2}>
-						<StyledText>Other Tab</StyledText>
+					<Tab title={"New Trade"}>
+						<StyledText>Start New Trade</StyledText>
 					</Tab>
 				</TabSet>
 			</View>

@@ -1,5 +1,5 @@
 import { StyledText } from "Components/Themed";
-import { AppColors } from "constants/Colors";
+import { Colors } from "constants/Colors";
 import Announcement, { IAnnouncementAttributes } from "Models/Announcement";
 import { View } from "native-base";
 import React from "react";
@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
 		width: "95%",
 		borderColor: "#707070",
 		padding: 10,
-		color: AppColors.White,
+		color: Colors.White,
 	},
 	header: {
 		marginBottom: 20,

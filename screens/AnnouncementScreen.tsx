@@ -9,8 +9,8 @@ export default function Announcement() {
 	return (
 		<View>
 			<StyledText>Announcement</StyledText>
-			<TextInput placeholder="Title" title="Title" />
-			<TextInput placeholder="Priority" title="Priority" />
+			<TextInput placeholder="Title" label="Title" />
+			<TextInput placeholder="Priority" label="Priority" />
 			<Textarea rowSpan={5} bordered placeholder="Description" underline />
 			<ConfirmDialog onCancel={() => null} onConfirm={() => null} />
 		</View>

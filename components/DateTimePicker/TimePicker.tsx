@@ -37,7 +37,7 @@ export default function TimePicker(props: ITimePickerProps) {
 					editable={false}
 					onPress={() => setShow(true)}
 					value={`${date.getHours()}:${date.getMinutes()}:00`}
-					title={props.label}
+					label={props.label}
 				/>
 			</Pressable>
 		</>

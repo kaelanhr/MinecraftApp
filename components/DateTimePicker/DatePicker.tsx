@@ -34,7 +34,7 @@ export default function DatePicker(props: IDatePickerProps) {
 					<TextInput
 						editable={false}
 						value={`${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`}
-						title={props.label}
+						label={props.label}
 					/>
 				</Pressable>
 

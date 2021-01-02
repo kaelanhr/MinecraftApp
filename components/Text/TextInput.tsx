@@ -1,20 +1,18 @@
 import { StyledText } from "Components/Themed";
 import React from "react";
 import { StyleSheet, TextInput as DefaultTextInput } from "react-native";
+import { ITextInput } from "./ITextInput";
 
-interface ITextInput {
-	title?: string;
-	editable?: boolean;
-	placeholder?: string;
-	secureText?: boolean;
-	value?: string;
-	onPress?: Function;
-}
-
+/**
+ * Component for all text input fields.
+ * @param props props for a text input field.
+ */
 export default function TextInput(props: ITextInput) {
 	return (
 		<>
-			{props.title ? <StyledText style={styles.title}>{props.title}</StyledText> : null}
+			{props.label && (
+				<StyledText style={styles.title}>{props.label}</StyledText>
+			)}
 			<DefaultTextInput
 				style={
 					props.editable == false ? styles.inputDisabled : styles.inputActive

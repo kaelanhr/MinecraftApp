@@ -3,11 +3,14 @@ import { CheckBox } from "native-base";
 import React from "react";
 import { View } from "react-native";
 
-export interface ICheckboxProps {
+export interface ICheckboxAttributes {
 	/** The text displayed to the end user for this checkbox item. */
 	displayValue: string;
 	/** The unique id of this checkbox item. */
 	id: string;
+}
+
+export interface ICheckboxExtensions {
 	/** function call back for when this item is selected. */
 	onSelected: () => void;
 	/** set whether the item is selected or not. */
@@ -18,7 +21,7 @@ export interface ICheckboxProps {
  * Component for a single checkbox item.
  * @param props checkbox props for a single item.
  */
-export default function Checkbox(props: ICheckboxProps) {
+export default function Checkbox(props: ICheckboxAttributes & ICheckboxExtensions) {
 	return (
 		<View onTouchEnd={props.onSelected}>
 			<CheckBox checked={props.isSelected} />

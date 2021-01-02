@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import Checkbox, { ICheckboxProps } from "./Checkbox";
+import Checkbox, { ICheckboxAttributes } from "./Checkbox";
 
 interface ICheckboxGroupProps {
 	/** List of checkbox items */
-	list: ICheckboxProps[];
+	list: ICheckboxAttributes[];
 }
 
 /**
