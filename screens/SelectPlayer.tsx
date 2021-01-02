@@ -1,9 +1,13 @@
+import { StackScreenProps } from "@react-navigation/stack";
 import { ConfirmDialog } from "Components/Button/ButtonGroup";
 import RadioItemGroup from "Components/RadioButton/RadioButtonGroup";
 import React from "react";
 import { View } from "react-native";
+import { BattleParamList, RootStackParamList } from "types";
 
-export default function SelectPlayer() {
+export default function SelectPlayer({
+	navigation,
+}: StackScreenProps<BattleParamList, "BattleScreen">) {
 	const players = [
 		{ id: "Kaelan", displayValue: "Kaelan" },
 		{ id: "Eshman", displayValue: "Eshman" },
@@ -13,7 +17,10 @@ export default function SelectPlayer() {
 	return (
 		<View>
 			<RadioItemGroup list={players} />
-			<ConfirmDialog onCancel={() => null} onConfirm={() => null} />
+			<ConfirmDialog
+				onCancel={() => null}
+				onConfirm={() => navigation.navigate("VersusScreen")}
+			/>
 		</View>
 	);
 }

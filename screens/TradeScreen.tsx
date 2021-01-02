@@ -10,7 +10,7 @@ export default function TradeScreen() {
 	return (
 		<ScreenBackground>
 			<View style={styles.center}>
-				<Avatar username="Eshman" color={PlayerColors.green} />
+				<Avatar username="Eshman" color={PlayerColors.Green} />
 			</View>
 
 			<View style={styles.container}>

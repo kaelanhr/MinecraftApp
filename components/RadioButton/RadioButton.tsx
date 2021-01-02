@@ -9,13 +9,13 @@ export interface IRadioButton {
 	displayValue: string;
 	/** the radio buttons unique id. */
 	id: string;
+	/** whether the radio item has been selected. */
+	isSelected: boolean;
 }
 
 export interface IRadioButtonExtension {
 	/** radio buttons selected callback function. */
 	onSelected: () => void;
-	/** whether the radio item has been selected. */
-	isSelected: boolean;
 }
 
 /**
@@ -25,14 +25,14 @@ export interface IRadioButtonExtension {
 export default function RadioItem(props: IRadioButton & IRadioButtonExtension) {
 	return (
 		<View style={styles.radioItem} onTouchEnd={props.onSelected}>
-			<View style={{ width: 60, marginTop: 10 }}>
+			<View style={{ width: "80%", marginTop: 10 }}>
 				<StyledText>{props.displayValue}</StyledText>
 			</View>
 			<Radio
 				color={Colors.Grey}
 				selectedColor={Colors.Green}
 				selected={props.isSelected}
-				style={{ marginLeft: 40, marginTop: 10 }}
+				style={{ marginTop: 10 }}
 			/>
 		</View>
 	);
@@ -41,5 +41,6 @@ export default function RadioItem(props: IRadioButton & IRadioButtonExtension) {
 const styles = StyleSheet.create({
 	radioItem: {
 		flexDirection: "row",
+		justifyContent: "center"
 	},
 });

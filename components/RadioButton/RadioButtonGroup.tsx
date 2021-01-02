@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import RadioItem, { IRadioButton } from "./RadioButton";
 
 interface IRadioButtonGroupProps {
@@ -10,15 +10,27 @@ interface IRadioButtonGroupProps {
  * @param props collection of radio buttons.
  */
 export default function RadioItemGroup(props: IRadioButtonGroupProps) {
-	const [selectedItem, setSelected] = useState("");
+	const [selectedItem, setSelected] = useState<number>(0);
+
+	const updateList = (value: number) => {
+		props.list.forEach((element, index) => {
+			if (index == value) {
+				element.isSelected = true;
+			} else {
+				element.isSelected = false;
+			}
+		});
+
+		setSelected(value);
+	};
 
 	return (
 		<>
-			{props.list.map((x) => (
+			{props.list.map((x, key) => (
 				<RadioItem
 					displayValue={x.displayValue}
-					isSelected={selectedItem == x.id}
-					onSelected={() => setSelected(x.id)}
+					isSelected={selectedItem == key}
+					onSelected={() => updateList(key)}
 					key={x.id}
 					id={x.id}
 				/>

@@ -3,15 +3,14 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createStackNavigator } from "@react-navigation/stack";
 import { View } from "native-base";
 import * as React from "react";
-
-import Colors from "../constants/Colors";
 import useColorScheme from "../hooks/useColorScheme";
 import BattleScreen from "../screens/BattleScreen";
 import HomeScreen from "../screens/HomeScreen";
 import ProjectScreen from "../screens/ProjectScreen";
 import TradeScreen from "../screens/TradeScreen";
-import { BottomTabParamList, HomeParamList, ProjectParamList } from "../types";
+import { BattleParamList, BottomTabParamList, HomeParamList, ProjectParamList } from "../types";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
+import VersusScreen from "../screens/VersusScreen";
 
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
 
@@ -59,7 +58,7 @@ export default function BottomTabNavigator() {
 			/>
 			<BottomTab.Screen
 				name="Battle"
-				component={BattleScreen}
+				component={BattleStackNavigator}
 				options={{
 					tabBarIcon: ({ color }) => (
 						<MaterialCommunityIcons
@@ -97,10 +96,18 @@ const ProjectStack = createStackNavigator<ProjectParamList>();
 function ProjectNavigator() {
 	return (
 		<ProjectStack.Navigator headerMode="none">
-			<ProjectStack.Screen
-				name="ProjectScreen"
-				component={ProjectScreen}
-			/>
+			<ProjectStack.Screen name="ProjectScreen" component={ProjectScreen} />
 		</ProjectStack.Navigator>
+	);
+}
+
+const BattleStack = createStackNavigator<BattleParamList>();
+
+function BattleStackNavigator() {
+	return (
+		<BattleStack.Navigator headerMode="none" initialRouteName="BattleScreen">
+			<BattleStack.Screen name="BattleScreen" component={BattleScreen} />
+			<BattleStack.Screen name="VersusScreen" component={VersusScreen}  />
+		</BattleStack.Navigator>
 	);
 }
