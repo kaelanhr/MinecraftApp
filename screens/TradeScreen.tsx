@@ -1,7 +1,7 @@
 import Avatar from "Components/Player/Avatar";
 import TabSet, { Tab } from "Components/Tabs/TabSet";
 import { StyledText } from "Components/Themed";
-import * as Colors from "constants/Colors";
+import { PlayerColors } from "constants/Colors";
 import * as React from "react";
 import { StyleSheet, View } from "react-native";
 import ScreenBackground from "./ScreenBackground";
@@ -10,7 +10,7 @@ export default function TradeScreen() {
 	return (
 		<ScreenBackground>
 			<View style={styles.center}>
-				<Avatar username="Eshman" color={Colors.PlayerColors.green} />
+				<Avatar username="Eshman" color={PlayerColors.green} />
 			</View>
 
 			<View style={styles.container}>
@@ -35,9 +35,9 @@ const styles = StyleSheet.create({
 		display: "flex",
 		alignItems: "center",
 		justifyContent: "center",
-		marginTop: 10
+		marginTop: 10,
 	},
 	container: {
-		marginTop: 10
+		marginTop: 10,
 	},
 });

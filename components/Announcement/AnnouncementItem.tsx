@@ -1,22 +1,15 @@
 import { StyledText } from "Components/Themed";
-import { IUser } from "Models/User";
+import { AppColors } from "constants/Colors";
+import Announcement, { IAnnouncementAttributes } from "Models/Announcement";
 import { View } from "native-base";
 import React from "react";
 import { StyleSheet } from "react-native";
-
-interface IAnnouncementProps {
-	/** The title of the announcement */
-	title: string;
-	priority: "Urgent" | "Minor" | "Moderate";
-	user: IUser;
-	message: string;
-}
 
 /**
  * Component for displaying a single announcement.
  * @param props Contain announcement information.
  */
-export default function AnnouncementItem(props: IAnnouncementProps) {
+export default function AnnouncementItem(props: Announcement) {
 	return (
 		<>
 			<View style={styles.announcement}>
@@ -37,7 +30,7 @@ const styles = StyleSheet.create({
 		width: "95%",
 		borderColor: "#707070",
 		padding: 10,
-		color: "white",
+		color: AppColors.White,
 	},
 	header: {
 		marginBottom: 20,

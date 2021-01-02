@@ -2,9 +2,14 @@ import React, { useState } from "react";
 import Checkbox, { ICheckboxProps } from "./Checkbox";
 
 interface ICheckboxGroupProps {
+	/** List of checkbox items */
 	list: ICheckboxProps[];
 }
 
+/**
+ * Component to display a collection of checkbox items.
+ * @param props checkbox items to display in the group
+ */
 export default function CheckboxGroup(props: ICheckboxGroupProps) {
 	const [selectedItems, setSelectedItems] = useState<string[]>([]);
 

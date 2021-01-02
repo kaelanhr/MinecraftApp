@@ -14,6 +14,10 @@ export interface ICheckboxProps {
 	isSelected: boolean;
 }
 
+/**
+ * Component for a single checkbox item.
+ * @param props checkbox props for a single item.
+ */
 export default function Checkbox(props: ICheckboxProps) {
 	return (
 		<View onTouchEnd={props.onSelected}>

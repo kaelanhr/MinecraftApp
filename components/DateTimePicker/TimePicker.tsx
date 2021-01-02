@@ -4,7 +4,8 @@ import React, { useState } from "react";
 import { Platform, Pressable, View } from "react-native";
 
 interface ITimePickerProps {
-	title?: string
+	/** The label to show above the timerpicker input field. */
+	label?: string;
 }
 
 export default function TimePicker(props: ITimePickerProps) {
@@ -36,7 +37,7 @@ export default function TimePicker(props: ITimePickerProps) {
 					editable={false}
 					onPress={() => setShow(true)}
 					value={`${date.getHours()}:${date.getMinutes()}:00`}
-					title={props.title}
+					title={props.label}
 				/>
 			</Pressable>
 		</>

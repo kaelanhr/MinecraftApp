@@ -1,4 +1,4 @@
-import * as Colors from "constants/Colors";
+import {AppColors} from "constants/Colors";
 import React, { useState } from "react";
 import { Pressable, StyleSheet, Text, View } from "react-native";
 
@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
 	TabTitles: {
 		flexDirection: "row",
 		justifyContent: "space-between",
-		borderColor: Colors.Grey,
+		borderColor: AppColors.Grey,
 		borderStyle: "solid",
 		borderWidth: 1,
 		borderRightWidth: 0,
@@ -65,21 +65,21 @@ const styles = StyleSheet.create({
 		padding: 5,
 	},
 	InactiveText: {
-		color: Colors.Grey,
+		color: AppColors.Grey,
 	},
 	ActiveText: {
-		color: Colors.White,
+		color: AppColors.White,
 	},
 	Tab: {
 		flexGrow: 1,
-		borderColor: Colors.Grey,
+		borderColor: AppColors.Grey,
 		borderStyle: "solid",
 		borderRightWidth: 1,
 	},
 	ActiveTab: {
-		backgroundColor: Colors.Green,
+		backgroundColor: AppColors.Green,
 	},
 	InActiveTab: {
-		backgroundColor: Colors.Black,
+		backgroundColor: AppColors.Black,
 	},
 });

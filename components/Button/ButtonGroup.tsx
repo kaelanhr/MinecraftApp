@@ -1,9 +1,5 @@
-import { StyledText } from "Components/Themed";
 import React from "react";
-import { Pressable, StyleSheet, View } from "react-native";
-import CancelIcon from "assets/images/Cancel.svg";
-import { ButtonSize } from "constants/Layout";
-import Cog from "assets/images/COG.svg";
+import { StyleSheet, View } from "react-native";
 import { Cancel, Confirm } from "./Button";
 
 interface IConfirmDialogProps {
@@ -13,6 +9,10 @@ interface IConfirmDialogProps {
 	onCancel: () => void;
 }
 
+/**
+ * Component which wraps and styles cancel and confirm buttons together.
+ * @param props dialog function props.
+ */
 export function ConfirmDialog(props: IConfirmDialogProps) {
 	return (
 		<View style={styles.Wrapper}>

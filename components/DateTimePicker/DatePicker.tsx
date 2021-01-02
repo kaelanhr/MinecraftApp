@@ -4,7 +4,8 @@ import React, { useState } from "react";
 import { Platform, Pressable } from "react-native";
 
 interface IDatePickerProps {
-	title?: string
+	/** The label to show above the datepicker input field. */
+	label?: string
 }
 
 export default function DatePicker(props: IDatePickerProps) {
@@ -33,7 +34,7 @@ export default function DatePicker(props: IDatePickerProps) {
 					<TextInput
 						editable={false}
 						value={`${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`}
-						title={props.title}
+						title={props.label}
 					/>
 				</Pressable>
 

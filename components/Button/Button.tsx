@@ -1,6 +1,7 @@
 import ConfirmIcon from "assets/images/Confirm.svg";
 import CancelIcon from "assets/images/Cancel.svg";
 import PlusIcon from "assets/images/Plus.svg";
+import CogIcon from "assets/images/COG.svg";
 import { ButtonSize } from "constants/Layout";
 import React from "react";
 import { Pressable, PressableProps } from "react-native";
@@ -37,6 +38,18 @@ export function Plus(props: PressableProps) {
 	return (
 		<Pressable {...props}>
 			<PlusIcon height={ButtonSize} width={ButtonSize} />
+		</Pressable>
+	);
+}
+
+/**
+ * Wrapper component to create pressable cog button.
+ * @param props pressable props for cog button.
+ */
+export function Cog(props: PressableProps) {
+	return (
+		<Pressable {...props}>
+			<CogIcon height={ButtonSize} width={ButtonSize} />
 		</Pressable>
 	);
 }

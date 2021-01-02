@@ -1,5 +1,5 @@
 import { StyledText } from "Components/Themed";
-import * as Colors from "constants/Colors";
+import { AppColors } from "constants/Colors";
 import { Radio } from "native-base";
 import React from "react";
 import { StyleSheet, View } from "react-native";
@@ -12,8 +12,8 @@ export default function RadioItem(props: IRadioItemGroup) {
 				<StyledText>{props.displayValue}</StyledText>
 			</View>
 			<Radio
-				color={Colors.Grey}
-				selectedColor={Colors.Green}
+				color={AppColors.Grey}
+				selectedColor={AppColors.Green}
 				selected={props.isSelected}
 				style={{ marginLeft: 40, marginTop: 10 }}
 			/>

@@ -6,13 +6,16 @@ import TextInput from "Components/Text/TextInput";
 import React from "react";
 import { View } from "react-native";
 
+/**
+ * Component for the form to create a new battle.
+ */
 export default function NewBattle() {
 	return (
 		<>
 			<View style={{ width: "80%" }}>
 				<TextInput title="Location" />
-				<DatePicker title="Date" />
-				<TimePicker title="Time" />
+				<DatePicker label="Date" />
+				<TimePicker label="Time" />
 				<TextArea title="Rules" />
 				<ConfirmDialog onCancel={() => null} onConfirm={() => null} />
 			</View>
