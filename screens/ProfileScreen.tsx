@@ -12,10 +12,10 @@ export default function ProfileScreen({
 }: StackScreenProps<RootStackParamList, "Profile">) {
 	return (
 		<ScreenBackground isCentred={true}>
-			<Avatar username="Eshman" color={PlayerColors.green} />
+			<Avatar username="DarkWolf_V" color={PlayerColors.Blue} />
 			<TextInput editable={false} label="Role" value="Administrator" />
-			<TextInput editable={false} label="Color" value="Green" />
-			<TextInput label="Username" value="Eshman" placeholder="Username..." />
+			<TextInput editable={false} label="Color" value="Blue" />
+			<TextInput label="Username" value="DarkWolf_V" placeholder="Username..." />
 			<TextInput
 				label="Description"
 				value="Some Dude"

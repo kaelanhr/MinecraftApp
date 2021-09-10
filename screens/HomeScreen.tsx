@@ -1,6 +1,6 @@
 import { StackScreenProps } from "@react-navigation/stack";
 import AnnouncementItem from "Components/Announcement/AnnouncementItem";
-import { Cog } from "Components/Button/Button";
+import { Cog, Plus } from "Components/Button/Button";
 import Announcement from "Models/Announcement";
 import * as React from "react";
 import { Pressable } from "react-native";
@@ -22,6 +22,7 @@ export default function HomeScreen({
 				style={{ alignSelf: "flex-end" }}
 				onPress={() => navigation.navigate("Profile")}
 			/>
+			<Plus onPress={() => navigation.navigate("AddNews")} />
 			<AnnouncementItem {...testAnnouncement} />
 		</ScreenBackground>
 	);

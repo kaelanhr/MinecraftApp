@@ -25,15 +25,15 @@ export interface IRadioButtonExtension {
 export default function RadioItem(props: IRadioButton & IRadioButtonExtension) {
 	return (
 		<View style={styles.radioItem} onTouchEnd={props.onSelected}>
-			<View style={{ width: "80%", marginTop: 10 }}>
-				<StyledText>{props.displayValue}</StyledText>
-			</View>
 			<Radio
 				color={Colors.Grey}
 				selectedColor={Colors.Green}
 				selected={props.isSelected}
 				style={{ marginTop: 10 }}
 			/>
+			<View style={{  marginTop: 10, marginLeft: 20 }}>
+				<StyledText>{props.displayValue}</StyledText>
+			</View>
 		</View>
 	);
 }
@@ -41,6 +41,5 @@ export default function RadioItem(props: IRadioButton & IRadioButtonExtension) {
 const styles = StyleSheet.create({
 	radioItem: {
 		flexDirection: "row",
-		justifyContent: "center"
 	},
 });

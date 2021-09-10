@@ -1,6 +1,7 @@
-import Button from "Components/Button";
+import Button from "Components/Button/Button";
 import TextInput from "Components/Text/TextInput";
 import { StyledText } from "Components/Themed";
+import React from "react";
 
 export default function LoginScreen() {
 	return (
@@ -8,7 +9,7 @@ export default function LoginScreen() {
 			<StyledText>Login</StyledText>
 			<TextInput placeholder="Username" />
 			<TextInput placeholder="Password" secureText={true} />
-			<Button buttonText="Submit" onPress={() => null} />
+			<Button text="Submit" onPress={() => null} />
 		</>
 	);
 }

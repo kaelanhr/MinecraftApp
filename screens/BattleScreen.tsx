@@ -13,6 +13,8 @@ import { View } from "native-base";
 export default function BattleScreen({
 	navigation,
 }: StackScreenProps<BattleParamList, "BattleScreen">) {
+	// hard coded list of users and colors for now.
+	// will receive from api in future.
 	const users = [
 		{ username: "alx91", color: PlayerColors.White },
 		{ username: "BLEACH_kyan", color: PlayerColors.White },
@@ -42,21 +44,15 @@ export default function BattleScreen({
 	return (
 		<>
 			<ScreenBackground isCentred={true}>
-				{/* <Versus
-					playerOne={{ color: PlayerColors.Blue, username: "DarkWolf_V" }}
-					playerTwo={{ color: PlayerColors.Green, username: "Eshman" }}
-				/> */}
-				{/* <SelectPlayer navigation={navigation} route="B" /> */}
 				<View>
 					<RadioItemGroup list={players} />
 					<ConfirmDialog
-						onCancel={() => console.log(players)}
+						onCancel={() => navigation.goBack()}
 						onConfirm={() =>
 							navigation.navigate("VersusScreen", selectPlayer())
 						}
 					/>
 				</View>
-				{/* <NewBattle /> */}
 			</ScreenBackground>
 		</>
 	);

@@ -18,7 +18,7 @@ export default function SelectPlayer({
 		<View>
 			<RadioItemGroup list={players} />
 			<ConfirmDialog
-				onCancel={() => null}
+				onCancel={() => navigation.goBack()}
 				onConfirm={() => navigation.navigate("VersusScreen")}
 			/>
 		</View>

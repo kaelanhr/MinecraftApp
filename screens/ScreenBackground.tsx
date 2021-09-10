@@ -7,9 +7,7 @@ export default function ScreenBackground(props: {
 	isCentred?: boolean;
 }) {
 	return (
-		<SafeAreaView
-			style={styles.container}
-		>
+		<SafeAreaView style={styles.container}>
 			<View
 				style={props.isCentred ? styles.centerLayout : styles.defaultLayout}
 			>
@@ -29,7 +27,7 @@ const styles = StyleSheet.create({
 	defaultLayout: {
 		flex: 1,
 		backgroundColor: "#141414",
-		marginTop: 10
+		marginTop: 10,
 	},
 	container: {
 		flex: 1,
@@ -38,6 +36,9 @@ const styles = StyleSheet.create({
 	separator: {
 		marginVertical: 30,
 		height: 1,
+		width: "80%",
+	},
+	parent: {
 		width: "80%",
 	},
 });

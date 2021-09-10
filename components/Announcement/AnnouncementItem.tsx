@@ -27,7 +27,7 @@ export default function AnnouncementItem(props: Announcement) {
 const styles = StyleSheet.create({
 	announcement: {
 		backgroundColor: "#303030",
-		width: "95%",
+		width: "100%",
 		borderColor: "#707070",
 		padding: 10,
 		color: Colors.White,

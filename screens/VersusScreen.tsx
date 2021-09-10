@@ -1,17 +1,15 @@
 import { StackScreenProps } from "@react-navigation/stack";
+import NewBattle from "Components/Battle/NewBattle";
 import Versus from "Components/Battle/Versus";
-import { IPlayerAvatarProps } from "Components/Player/Avatar";
 import { PlayerColors } from "constants/Colors";
 import React from "react";
-import { View, Text } from "react-native";
 import { BattleParamList } from "types";
 import ScreenBackground from "./ScreenBackground";
 
 export default function VersusScreen({
-	navigation,
 	route,
+	navigation
 }: StackScreenProps<BattleParamList, "VersusScreen">) {
-	console.log(route.params)
 	return (
 		<ScreenBackground isCentred={true}>
 			<Versus
@@ -21,6 +19,7 @@ export default function VersusScreen({
 					username: route.params.username,
 				}}
 			/>
+			<NewBattle route={route} navigation={navigation} />
 		</ScreenBackground>
 	);
 }
