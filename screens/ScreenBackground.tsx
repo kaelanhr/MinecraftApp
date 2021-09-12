@@ -33,12 +33,4 @@ const styles = StyleSheet.create({
 		flex: 1,
 		backgroundColor: "#141414",
 	},
-	separator: {
-		marginVertical: 30,
-		height: 1,
-		width: "80%",
-	},
-	parent: {
-		width: "80%",
-	},
 });
